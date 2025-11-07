@@ -1,0 +1,12 @@
+| Command | Description                         | Example                  |
+| ------- | ----------------------------------- | ------------------------ |
+| `pwd`   | Shows the current working directory | `pwd`                    |
+| `ls`    | Lists files and directories         | `ls -l` (long format)    |
+| `cd`    | Changes directory                   | `cd Documents`           |
+| `mkdir` | Creates a new directory             | `mkdir myfolder`         |
+| `rmdir` | Deletes an empty directory          | `rmdir oldfolder`        |
+| `touch` | Creates an empty file               | `touch file.txt`         |
+| `rm`    | Deletes a file                      | `rm file.txt`            |
+| `cp`    | Copies files or directories         | `cp file.txt backup.txt` |
+| `mv`    | Moves or renames files              | `mv old.txt new.txt`     |
+| `cat`   | Displays file contents              | `cat notes.txt`          |
