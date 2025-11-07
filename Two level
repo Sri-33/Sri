@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char dir[5][20], files[5][5][20];
+    int dcount = 0, fcount[5] = {0};
+    int ch, i, j;
+    char dname[20], fname[20];
+
+    do {
+        printf("\n1. Create Directory\n2. Create File\n3. Display\n4. Exit\nEnter choice: ");
+        scanf("%d", &ch);
+
+        switch(ch) {
+            case 1:
+                printf("Enter directory name: ");
+                scanf("%s", dir[dcount]);
+                dcount++;
+                printf("Directory created.\n");
+                break;
+
+            case 2:
+                printf("Enter directory name: ");
+                scanf("%s", dname);
+                for(i = 0; i < dcount; i++) {
+                    if(strcmp(dname, dir[i]) == 0) {
+                        printf("Enter file name: ");
+                        scanf("%s", files[i][fcount[i]]);
+                        fcount[i]++;
+                        printf("File created.\n");
+                        break;
+                    }
+                }
+                if(i == dcount) printf("Directory not found.\n");
+                break;
+
+            case 3:
+                for(i = 0; i < dcount; i++) {
+                    printf("\nDirectory: %s\n", dir[i]);
+                    for(j = 0; j < fcount[i]; j++)
+                        printf("  %s\n", files[i][j]);
+                    if(fcount[i] == 0) printf("  No files.\n");
+                }
+                if(dcount == 0) printf("No directories.\n");
+                break;
+        }
+    } while(ch != 4);
+
+    return 0;
+}
